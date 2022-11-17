@@ -22,17 +22,17 @@ public class Sample {
 
         List<String> newNameList = names.stream()
                 .filter(n -> n.contains(key))
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()); // przekształca tablicę w listę
 
         if (newNameList.size() != 1) {
             throw new RuntimeException("Error, to many results");
         }
 
-        return extractValue(namesMap, newNameList);
+        return extractValue(namesMap, newNameList);//zwrot wyodrebnionej wartosci
     }
 
     private static List<String> createList() {
-        List<String> names = new ArrayList<>();
+        List<String> names = new ArrayList<>();// zaimplementowana lista jako tablica
         names.add("Tomasz");
         names.add("Lucyna");
         names.add("Krystian");
@@ -41,7 +41,7 @@ public class Sample {
     }
 
     private static Map<String, String> createMap() {
-        Map<String, String> namesMap = new HashMap();
+        Map<String, String> namesMap = new HashMap(); // kolekcja danych hm -nieposortowane elementy
         namesMap.put("Dad", "Piotr");
         namesMap.put("Kid", "Tomasz");
         namesMap.put("Mom", "Lucyna");
