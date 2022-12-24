@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 
 public class Sample {
 
-    private String INITIAL_VALUE;
+    private String INITIAL_VALUE;//deklaracaj zmiennej typu string z poziomem dostepy private
+    String nos = "1";
 
     public Sample(String initialValue) {
         INITIAL_VALUE = initialValue;
